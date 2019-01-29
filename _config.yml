@@ -25,6 +25,7 @@ asset_url: "/assets/"
 logo: "/assets/logo.png"
 show_logo: false
 email: a.ward@eyedivision.com
+#Flourishingfamilies.clinic@sussexpartnership.nhs.uk
 
 default_post_image: "/assets/images/road_closed.jpg"
 default_gallery_image: "/assets/images/road_closed.jpg"
@@ -126,7 +127,7 @@ _options:
 # ga_tracking_id: ""
 
 # Google Recaptcha used for contact form - used by seo-tag
-recaptcha_site_key: "6LcNYBQUAAAAAALGOjCFo1CKxb65aFTFelMJo1YF"
+recaptcha_site_key: ""
 
 # Google Site verification if required
 # google_site_verification: ""
@@ -146,7 +147,6 @@ recaptcha_site_key: "6LcNYBQUAAAAAALGOjCFo1CKxb65aFTFelMJo1YF"
 #     url: https://twitter.com/EyeDivision  # URL of your profile (leave blank to not display in footer)
 #     desc: Follow me on Twitter            # Description to display as link title, etc
 #     share: true                           # Include in the "Share" section of posts
-social:
 
   - name: Facebook
     icon: icon-facebook_sign
@@ -164,8 +164,8 @@ social:
 
   - name: Twitter
     icon: icon-twitter_sign
-    username:
-    url:
+    username: 'ffamilies_SPFT'
+    url: "https://twitter.com/FFamilies_SPFT"
     desc: Follow us on Twitter
     share: true
 
