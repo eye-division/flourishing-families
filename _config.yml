@@ -111,12 +111,6 @@ _options:
     # production URL
     # production: ""
 
-# Snipcart API key
-# snipcart_api_key:
-
-# PayPal merchant ID
-# paypal_id:
-
 # Disqus comments
 #disqus_shortname: alun-ward
 
@@ -124,7 +118,7 @@ _options:
 # ga_tracking_id: ""
 
 # Google Recaptcha used for contact form - used by seo-tag
-recaptcha_site_key: ""
+# recaptcha_site_key: ""
 
 # Google Site verification if required
 # google_site_verification: ""
@@ -175,8 +169,8 @@ recaptcha_site_key: ""
 
   - name: linkedin
     icon: icon-linkedin_sign
-    username: 'eye-division-ltd'
-    url: https://www.linkedin.com/company/eye-division-ltd/
+    username:
+    url:
     desc: Connect with us on LinkedIn
     share: true
 
@@ -190,4 +184,3 @@ protocols:
     fb_image_type: "image/png"
 
     twitter_image: "/assets/logo.png"
-
