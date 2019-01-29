@@ -1,8 +1,5 @@
 # External gems - updated to plugins in jekyll v3.6
 plugins:
- # - jekyll-archives # Sorry, not GitHub pages friendly!
- # - jekyll-assets
- # - autoprefixer-rails
    - jekyll-seo-tag
    - jekyll-sitemap
    - jekyll/tagging
@@ -164,7 +161,7 @@ recaptcha_site_key: ""
 
   - name: Twitter
     icon: icon-twitter_sign
-    username: 'ffamilies_SPFT'
+    username: "ffamilies_SPFT"
     url: "https://twitter.com/FFamilies_SPFT"
     desc: Follow us on Twitter
     share: true
