@@ -9,10 +9,10 @@ plugins:
    - jekyll-tagging-related_posts
 
 # Site settings
-title: An artist
-subtitle: Great artist
-name: An artist
-description: Demo Eye Gallery site
+title: Flourishing Families Clinic
+subtitle:
+name: Flourishing Families Clinic
+description: Flourishing Families Clinic
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
@@ -40,8 +40,8 @@ highlightjs_theme: "monokai-sublime"
 
 # Image CDN
 imagecdn:
-  staging: "https://ed-eyegallery-dev.imgix.net" # apt-loris.cloudvent.net
-  production: "https://ed-eyegallery.imgix.net"
+  #staging: "https://ed-eyegallery-dev.imgix.net" # apt-loris.cloudvent.net
+  #production: "https://ed-eyegallery.imgix.net"
 
 # Collections Example
 collections:
@@ -120,7 +120,7 @@ _options:
 # paypal_id:
 
 # Disqus comments
-disqus_shortname: alun-ward
+#disqus_shortname: alun-ward
 
 # Google analytics
 # ga_tracking_id: ""
@@ -150,29 +150,29 @@ social:
 
   - name: Facebook
     icon: icon-facebook_sign
-    username: 'eyedivision'
-    url: https://www.facebook.com/eyedivision
+    username:
+    url:
     desc: Like us on Facebook
     share: true
 
   - name: Instagram
     icon: icon-instagram
-    username: '@eyedivision'
-    url: https://instagram.com/eyedivision
-    desc: Follow us on Instagram
+    username:
+    url:
+    desc:
     share: false
 
   - name: Twitter
     icon: icon-twitter_sign
-    username: '@EyeDivision'
-    url: https://twitter.com/EyeDivision
+    username:
+    url:
     desc: Follow us on Twitter
     share: true
 
   - name: Pinterest
     icon: icon-pinterest
-    username: 'eyediv'
-    url: https://www.pinterest.co.uk/eyediv/
+    username:
+    url:
     desc: Follow us on Pinterest
     share: true
 
