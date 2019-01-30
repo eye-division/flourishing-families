@@ -3,7 +3,7 @@ layout: home
 main_image_path:
 main_image_caption:
 show_carousel: false
-show_blog: true
+show_blog: false
 posts_number: 2
 carousel:
   - image: /assets/images/advert-customers.jpg
@@ -86,7 +86,7 @@ _comments:
         {% if section.main_image_path %}
           <section class="gallery--cover has--cover" style="background-image: url({{ section.main_image_path }});">
         {% else %}
-          <section class="gallery--cover has--cover" style="background-image: url('https://placekitten.com/g/1200/300');">
+          <section class="gallery--cover has--cover" style="background-image: url('https://via.placeholder.com/1200x300');">
         {% endif %}
 
           <a href="{{ section.url | prepend: site.baseurl }}">

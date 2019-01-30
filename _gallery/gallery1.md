@@ -4,7 +4,7 @@ display_title: true
 permalink: /gallery/test/
 description_markdown: >-
   This is an example of a gallery with thumbnails in their original format - landscape or portrait, exactly as you upload them.
-frontpage: true
+frontpage: false
 frontpagetitle: "Gallery 1"
 homepage_description_markdown: >-
   This is an example of a gallery with thumbnails in their original format - landscape or portrait, exactly as you upload them. 
