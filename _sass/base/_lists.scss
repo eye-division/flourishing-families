@@ -24,11 +24,13 @@ ol {
   margin-left: 15px;
   margin-bottom: 15px;
 }
-ul.default-ul,
-ol.default-ol {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+ul, ol {
+  &%default-ul,
+  &%default-ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .list--horizontal {

@@ -29,19 +29,19 @@
 
         {% endfor %}
 
-      </ul>
 
     {% if site.show_social_top %}
 
-      <ul class="navigation--social-menu">
         {% for social in site.social %}
 
           {% if social.url != null %}
 
           <li class="nav--link nav--social-media-link">
+
             <a href="{{ social.url }}" title="{{ social.desc }}">
               <svg class="icon {{ social.icon }}"><use xlink:href="#{{ social.icon }}" /></svg>
             </a>
+
           </li>
           {% endif %}
 

@@ -80,7 +80,10 @@ _comments:
       {% endif %}
 
       <!-- Regular page promotions on front page -->
-      {% for section in site.pages %}
+
+      {% assign sitepages = site.pages | sort: "frontpageorder_number"  %}
+
+      {% for section in sitepages %}
 
       {% if section.frontpage %}
 

@@ -2,7 +2,27 @@
 
   <div class="footer--wrapper">
 
+    <div class="site--navigation">
+
+      <h3>Site Map</h3>
+      {% assign links = site.pages | where:"main_nav",true | sort: "pageorder_number" %}
+      <ul class="pages">
+
+        {% for page in links %}
+
+          {% if page.title and page.main_nav != false %}
+            <li class=""><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+          {% endif %}
+        {% endfor %}
+      </ul>
+
+    </div>
+
     <div class="site--contact">
+
+      <h3>Contact</h3>
+      <p>{{ site.name }}</p>
+      <p><a href="mailto:{{ site.email }}"><svg class="icon icon--light"><use xlink:href="#icon-envelope_alt" /></svg></a> <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
 
       <ul class="social-media-list list--horizontal">
 
@@ -11,7 +31,7 @@
           <li class="">
             <a href="{{ social.url }}" title="{{ social.desc }}">
               <svg class="icon {{ social.icon }}"><use xlink:href="#{{ social.icon }}" /></svg>
-            </a>
+             {{ social.username }}</a>
           </li>
           {% endif %}
         {% endfor %}
@@ -21,16 +41,15 @@
     </div>
 
 
-    <div class="site--signature">
-      <p class="text">&copy; All work is copyright the artist, no reproduction without permission.<br>
-        <a href="/privacy/">Privacy</a><br>
-        Site by <a href="https://eyedivision.com">Eye Division</a></p>
-    </div>
-
-
   </div>
 
+
 </footer>
+<div class="site--copyright">
+  <p class="text">&copy; copyright {{ site.name }} {{ site.time | date: '%Y' }}<br>
+    <a href="/privacy/">Privacy</a><br>
+    Site by <a href="https://eyedivision.com">Eye Division</a></p>
+</div>
 
 <!-- Scripts -->
 {% if site.recaptcha_site_key and jekyll.environment == 'production' %}

@@ -37,6 +37,16 @@ $dark-gray: rgb(51, 51, 51) !default;
 $medium-gray: rgb(153, 153, 153);
 $light-gray: rgb(237, 237, 237);
 
+
+// NHS and FFC colours
+$lightblue: #2697F8;
+$darkbrown: #935422;
+$fawn: #D57A39;
+$darkgreen: #016B39;
+$midgreen: #6BA114;
+$olivegreen: #ABBE18;
+$brightgreen: #03A905;
+
 // Social Media Brand Colors */
 $twitter: rgb(0, 172, 237);
 $facebook: rgb(59, 89, 152);
@@ -115,10 +125,10 @@ $navigation-color-hover: $orange;
 $navigation-active-link-color: $orange;
 
 // footer
-$footer-background: $white;
-$footer-color: $dark-gray;
-$footer-color-hover: $action-hover-color;
-$footer-active-link-color: $action-color;
+$footer-background: $olivegreen;
+$footer-color: $white;
+$footer-color-hover: $white;
+$footer-active-link-color: $black;
 
 // drop down variables
 $dropdown-color: $base-font-color;
