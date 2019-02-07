@@ -16,6 +16,23 @@
 
 }
 
+.banner {
+
+}
+.banner::before {
+    background: url('/assets/logo-banner1280.jpg');
+    background-position: center center;
+    background-size: cover;
+
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+    z-index: -2;
+    opacity: 0.4;
+
+}
 .home {
     @include grid-media($large) { // half page width on 488px and above
         @include grid-column(3);
