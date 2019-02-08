@@ -14,6 +14,28 @@
         padding: 0 1em 1em;
     }
 
+
+}
+.fifty-fifty {
+
+    @include grid-media($large) {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+    section {
+        @include grid-media($large) {
+
+          flex: 0 1 50%;
+          @supports (display: grid) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1rem;
+            width: auto;
+          }
+
+        }
+    }
 }
 
 .banner {
@@ -32,10 +54,4 @@
     z-index: -2;
     opacity: 0.4;
 
-}
-.home {
-    @include grid-media($large) { // half page width on 488px and above
-        @include grid-column(3);
-        padding-right: 60px;
-    }
 }

@@ -45,7 +45,7 @@ _comments:
       <p class="center-this-text">We know that many parents who have mental health problems really worry about the impact of their symptoms on their children. The good news is that most children who have a parent with a mental health problem will be fine! But, for some children, the chance of developing symptoms of their own is increased.</p>
     </div>
 
-  </div>
+  </div><!-- end banner -->
 
     {% if page.show_carousel and page.carousel %}
       <section class="slideshow">
@@ -71,13 +71,16 @@ _comments:
       </section>
     {% endif %}
 
-      <!-- Regular page promotions on front page -->
 
-      {% assign sitepages = site.pages | sort: "frontpageorder_number"  %}
+    {% assign sitepages = site.pages | sort: "frontpageorder_number"  %}
 
-      {% for section in sitepages %}
+    <div class="fifty-fifty">
+
+    {% for section in sitepages %}
 
       {% if section.frontpage %}
+
+
 
         {% if section.main_image_path %}
           <section class="gallery--cover has--cover" style="background-image: url({{ section.main_image_path }});">
@@ -85,77 +88,30 @@ _comments:
           <section class="gallery--cover has--cover" style="background-image: url('https://via.placeholder.com/1200x300');">
         {% endif %}
 
-          <a href="{{ section.url | prepend: site.baseurl }}">
+        <a href="{{ section.url | prepend: site.baseurl }}">
 
-            <div class="scrim has--cover">
-              <article class="gallery--front">
-                <header class="gallery--header">
-                  <h2 class="cover--title mb0">{{ section.frontpagetitle }}</h2>
-                </header>
-                {% if section.homepage_description_markdown %}
-                  {{ section.homepage_description_markdown | markdownify }}
-                  <span class="post--readmore">Read more <span> <svg class="icon icon--post"><use xlink:href="#icon-double_angle_right" /></svg></span>
+          <div class="scrim has--cover">
+            <article class="gallery--front">
+              <header class="gallery--header">
+                <h2 class="cover--title mb0">{{ section.frontpagetitle }}</h2>
+              </header>
+              {% if section.homepage_description_markdown %}
+                {{ section.homepage_description_markdown | markdownify }}
+                <span class="post--readmore">Read more <span> <svg class="icon icon--post"><use xlink:href="#icon-double_angle_right" /></svg></span></span>
+              {% endif %}
 
-                {% endif %}
-            </span>
-          </article>
+            </article>
+
           </div>
-          </a>
-        </section>
 
-      {% endif %}
+        </a>
 
-    {% endfor %}
+      </section>
+    {% endif %}
 
-      <!-- Galleries -->
-    {% for gallery in site.gallery %}
-
-      {% if gallery.frontpage %}
-
-        <section class="gallery--cover {% if gallery.main_image_path %}has--cover{% endif %}" {% if gallery.main_image_path %}style="background-image: url({{ gallery.main_image_path | prepend: gallery.baseurl }});"{% endif %}>
-
-          <a href="{{ gallery.url }}">
-
-            <div class="scrim {% if gallery.main_image_path %}has--cover{% endif %}">
-              <article class="gallery--front">
-                <header class="gallery--header">
-                  <h2 class="cover--title mb0">{{ gallery.frontpagetitle }}</h2>
-                </header>
-                {% if gallery.homepage_description_markdown %}
-                  {{ gallery.homepage_description_markdown | markdownify }} <span class="post--readmore">View gallery  <svg class="icon icon--post"><use xlink:href="#icon-double_angle_right" /></svg></span>
-                {% endif %}
-              </article>
-            </div>
-          </a>
-        </section>
-
-      {% endif %}
-
-    {% endfor %}
+  {% endfor %}
 
 
-{% if page.show_blog %}
 
-    <section class="blog blog--home">
-
-      <div class="editable">
-        <h2>Latest news</h2>
-      </div>
-
-      <ul class="posts--list">
-
-        {% for post in site.posts limit:page.posts_number %}
-
-         {% unless post.categories contains 'Archive' %}
-
-          {% include post_excerpt.html %}
-
-        {% endunless %}
-
-        {% endfor %}
-
-      </ul>
-      <p><a href="/news/">Read all news&nbsp;&raquo;</a></p>
-
-    </section>
-    {% endif %}</section>
+</section>
+</div><!-- end fifty fifty -->
