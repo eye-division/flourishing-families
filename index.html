@@ -1,27 +1,27 @@
 ---
 layout: home
-main_image_path:
-main_image_caption:
 show_carousel: false
 show_blog: false
 posts_number: 2
 carousel:
-  - image: /assets/images/advert-customers.jpg
+  - image_path: /assets/images/advert-customers.jpg
     caption: "A test caption"
     alink: /gallery/test/
-  - image: /assets/images/advert-impregnable.jpg
+  - image_path: /assets/images/advert-impregnable.jpg
     caption:
     alink:
 _options:
   layout:
     hidden: true
+  show_carousel:
+    hidden: true
+  show_blog:
+    hidden: true
+  posts_number:
+    hidden: true
+  carousel:
+    hidden: true
   image_path:
-    uploads_dir: "assets/images/:year"
-    width: 1200
-    height: 1200
-    resize_style: contain
-    mime_type: image/jpeg
-  main_image_path:
     uploads_dir: "assets/images/:year"
     width: 1200
     height: 1200
@@ -30,25 +30,13 @@ _options:
   content:
     uploads_dir: "assets/:year"
 _comments:
-  main_image_path: Cover image
-  main_image_caption: Alt text for cover image
   carousel: Edit the slideshow
-  show_carouse: Show the slideshow
+  show_carousel: Show the slideshow
   show_blog: Show your latest posts on the homepage
   posts_number: How many posts to show
   alink: Optional web link from the slide
   caption: optional caption
 ---
-
-{% if page.main_image_path %}
-  <!-- parallax picture please -->
-    <figure>
-    {% assign alt_text = page.title %}
-    {% if page.main_image_caption %} {% assign alt_text = page.main_image_caption %} {% endif %}
-    {% include img.html src=page.main_image_path alt=alt_text %}
-    <figcaption>{{ alt_text }}</figcaption>
-    </figure>
-  {% endif %}
 
   <div class="banner">
 
@@ -60,28 +48,28 @@ _comments:
   </div>
 
     {% if page.show_carousel and page.carousel %}
-    <section class="slideshow">
-      <h2>This is a demo slideshow</h2>
-      <div class="flexslider">
+      <section class="slideshow">
+        <h2>This is a demo slideshow</h2>
+        <div class="flexslider">
           <ul class="slides">
             {% for slides in page.carousel %}
-            <li>
-              {% if slides.alink %}
-                 <a href="{{ site.baseurl }}{{ slides.alink }}" title="View project">
-              {% endif %}
-              {% include img.html src=slides.image width=960 alt=slides.caption %}
-              {% if slides.alink %}
-                </a>
-              {% endif %}
-              {% if slides.caption %}
-                <p class="flex-caption">{% if slides.alink %}<a href="{{ site.baseurl }}{{ slides.alink }}" title="View project">{% endif %}{{ slides.caption }}{% if slides.alink %}&nbsp;<svg class="icon icon__white icon--readmore"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="#icon-double_angle_right" /></svg></a>{% endif %}</p>
-              {% endif %}
-            </li>
+              <li>
+                {% if slides.alink %}
+                   <a href="{{ site.baseurl }}{{ slides.alink }}" title="View project">
+                {% endif %}
+                {% include img.html src=slides.image width=960 alt=slides.caption %}
+                {% if slides.alink %}
+                  </a>
+                {% endif %}
+                {% if slides.caption %}
+                  <p class="flex-caption">{% if slides.alink %}<a href="{{ site.baseurl }}{{ slides.alink }}" title="View project">{% endif %}{{ slides.caption }}{% if slides.alink %}&nbsp;<svg class="icon icon__white icon--readmore"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="#icon-double_angle_right" /></svg></a>{% endif %}</p>
+                {% endif %}
+              </li>
             {% endfor %}
           </ul>
         </div>
       </section>
-      {% endif %}
+    {% endif %}
 
       <!-- Regular page promotions on front page -->
 

@@ -10,6 +10,7 @@ h3,
 h4,
 h5,
 h6 {
+ font-weight: 400;
   font-family: $heading-font-family;
   font-size: modular-scale(1);
   line-height: $heading-line-height;
@@ -74,11 +75,39 @@ hr {
 .textright {
     text-align: right;
 }
-blockquote {
+
+/*
+  blockquote {
   padding: 1em 0;
   border-bottom: 1px solid $action-color;
   font-style: italic;
 }
+*/
+
+// styled blockquotes
+blockquote {
+  background: tint($action-color,90%);
+  border-left: 10px solid $action-color;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  font-family: $heading-font-family;
+  color: $action-color;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+cite {
+  display: block;
+}
+
 
 strong {
   color: $action-color;

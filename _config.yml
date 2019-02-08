@@ -19,13 +19,13 @@ url: "https://black-hare.cloudvent.net"
 # apt-loris.cloudvent.net for Jekyll3
 asset_url: "/assets/"
 
-logo: "/assets/logo.png"
-show_logo: false
-email: a.ward@eyedivision.com
+logo: "/assets/logo-s.png"
+show_logo: true
+email: Flourishingfamilies.clinic@sussexpartnership.nhs.uk
 #Flourishingfamilies.clinic@sussexpartnership.nhs.uk
 
-default_post_image: "/assets/images/road_closed.jpg"
-default_gallery_image: "/assets/images/road_closed.jpg"
+default_post_image: "/assets/logo-l.png"
+default_gallery_image: "/assets/logo-l.png"
 
 show_social_top: true
 
@@ -174,13 +174,3 @@ social:
     desc: Connect with us on LinkedIn
     share: true
 
-# Social sharing protocols
-# These are for automatically generating sharing metadata for FB and Twitter
-
-protocols:
-    fb_image: "/assets/logo.png"
-    fb_image_width: 612
-    fb_image_height: 605
-    fb_image_type: "image/png"
-
-    twitter_image: "/assets/logo.png"

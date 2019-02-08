@@ -32,7 +32,7 @@ body {
   align-items: center; // centers horizontally
 }
 
-.site--footer {
+.site--copyright {
   flex-shrink: 0; // footer sticks to bottom of page
 }
 
@@ -41,13 +41,14 @@ body {
 @supports (display: grid) {
   body {
     display: grid;
-    grid-template-rows: max-content auto auto;
+    grid-template-rows: max-content auto auto auto;
 
     // 1. header.page--header
     // 2. div.page--content
     // 3. footer.site--footer
+    // 4. site-copyright
 
-    grid-gap: 1rem;
+    //grid-gap: 1rem;
     align-items: start;
   }
 }

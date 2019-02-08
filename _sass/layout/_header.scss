@@ -16,47 +16,65 @@
     &:focus {
         outline: none;
     }
-}
-.header--logo {
-
-}
-
-.header--title {
-    align-self: center; // flex centered
-
-    font-family: $logo-font-family;
-    color: $dark-gray;
-    text-transform: uppercase;
-    text-decoration: none;
-    margin-top: 0;
-    margin-bottom: 1rem;
-
-    font-size: modular-scale(3);
 
     @include grid-media ($small) {
-        font-size: modular-scale(5);
+        @supports (display: grid) {
+            display: grid;  // this is the container
+            grid-gap: 10px;
+            // 3 column header
+            grid-template-columns: 200px minmax(200px, 1fr) 200px;
+            justify-items: center;
+        }
     }
+
 }
 
-/// And now, with the grid
-/* https://gridbyexample.com/ */
-@supports (display: grid) {
-    .header--wrapper {
-        display: grid;
-        grid-gap: 10px;
-        justify-items: center;
-    }
-    .header--logo {
+.title {
+    text-align: center;
+}
+
+.header--logo {
+    /// And now, with the grid
+    /* https://gridbyexample.com/ */
+    @supports (display: grid) {
         justify-self: center;
         width: auto;
         max-width: 150px;
     }
 }
 
-.subtitle {
-    color: $base-font-color;
+.trustlogo {
+    max-height: 60px;
+    margin-top: 10px;
+    @include grid-media ($small) {
+        max-height: inherit;
+    }
+}
+
+.header--title {
+    align-self: center; // flex centered
+
+    font-family: $logo-font-family;
+    font-weight: 900;
+    color: $fawn;
+    //text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.4em;
+    font-size: modular-scale(2);
+
+    @include grid-media ($small) {
+        font-size: modular-scale(4);
+        line-height: 1.6em;
+    }
+}
+
+
+.sub--title {
+    color: $olivegreen;
     font-family: $subheading-font-family;
     font-weight: 400;
     font-style: italic;
-    font-size: modular-scale(3);
+    font-size: modular-scale(2);
 }

@@ -4,6 +4,7 @@
     background-color: $footer-background;
     color: $footer-color;
     border-top: 4px solid $darkgreen;
+    //border-bottom: 4px solid $darkgreen;
     text-align: center;
     a {
         color: $footer-color;
@@ -18,25 +19,14 @@
             color: $footer-active-link-color;
         }
     }
+    ul {
+        @extend %default-ul;
+    }
 }
 .footer--wrapper {
     padding: 0 1em;
-    margin-top: 1em;
 }
 ///  Site Navigation (left)
-
-/* not used in this site
-.site--navigation {
-    @include grid-column(12);
-    @include grid-media ($small) {
-        @include grid-column(6);
-    }
-    font-size: 0.9em;
-    ul {
-        @extend %default-ul !optional;
-    }
-}*/
-
 
 .social-media-list {
     padding: 1em 0;
@@ -48,15 +38,6 @@
 ///   Contact Info (left)
 
 .site--contact {
-    margin-top: 1em;
-    /*
-    @include grid-column(12);
-    @include grid-media ($small) {
-        @include grid-column(6);
-        margin-top: 0;
-        margin-right: 0;
-    }
-    */
 
     font-size: 0.9em;
     i {
@@ -70,7 +51,7 @@
 
 
 ///   Site Description/Signature - new row
-.site--copyright {
+.site--copyright { // bottom of page
     clear: both;
     background-color: $darkgreen;
     color: $footer-color;
@@ -78,14 +59,6 @@
     padding: 1em;
     //margin-top: 1em;
     text-align: center;
-    /*
-    @include grid-column(12);
-    @include grid-media ($small) {
-        @include grid-column(6);
-        margin-right: 0;
-        margin-top: 0;
-    }
-    */
     font-size: 0.9em;
     a {
         text-decoration: underline;
@@ -96,10 +69,10 @@
 /// And now, with the grid
 @supports (display: grid) {
 
-    .site--footer {
+    .site--copyright {
         // positioning of main body grid - push down to bottom of page
-        grid-row-start: 3;
-        grid-row-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 5;
     }
 
     .footer--wrapper {
