@@ -2,7 +2,11 @@
 layout: default
 
 ---
-<div class="page">
+<div class="page{% if page.aside  %} two-column{% endif %}">
+
+  {% if page.aside  %}
+  <div class="with--aside">
+  {% endif %}
 
   <header class="page--header">
     <h1 class="page--title">{{ page.title }}</h1>
@@ -64,6 +68,45 @@ layout: default
     </section>
 
     {% endif %}
+
+
+  {% if page.aside %}
+  </div><!-- end with-aside -->
+
+  <div class="aside"><!-- start aside -->
+
+    {% for link in site.data.nav %}
+      {% if link.subcategories != null %}
+        {% if page.url contains link.href %}
+          <ul class="submenu default">
+            {% for subcategory in link.subcategories %}
+              <li class="{% unless link.title == "Home" %}{% if page.url contains subcategory.subhref %} active{% endif %}{% endunless %}"><a href="{{ subcategory.subhref | prepend: site.baseurl }}">{{ subcategory.subtitle }}</a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+
+    {% if page.twitterfeed %}
+
+      {% for social in site.social %}
+
+        {% if social.name == "Twitter" %}
+
+          <div class="widget twitter">
+
+            <a class="twitter-timeline" data-height="400" href="https://twitter.com/{{ social.username }}?ref_src=twsrc%5Etfw">Tweets by {{ social.username }}</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+
+        {% endif %}
+
+      {% endfor %}
+
+    {% endif %}
+
+  </div><!-- end aside -->
+
+  {% endif %}
 
 </div>
 

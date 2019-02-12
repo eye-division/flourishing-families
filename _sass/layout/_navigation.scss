@@ -81,8 +81,9 @@ nav {
     width: 100%;
     padding: 0.25em 0;
     @include grid-media ($small) {
+        padding: 0;
         background: transparent;
-        display: inline;
+        display: inline-block;
         text-decoration: none;
         width: auto;
     }
@@ -91,12 +92,13 @@ nav {
         color: $navigation-color;
         display: inline-block;
         @include grid-media ($small) {
-            padding-right: 1.5em;
+            padding: 0.5em;
         }
         &:hover {
             color: $navigation-color-hover;
             text-decoration: none;
         }
+
     }
 
     &:last-child a {
@@ -104,9 +106,9 @@ nav {
             padding-right: 1em;
         }
     }
-    &.active a {
+    &.active {
         a {
-            color: $action-hover-color
+            //color: $action-hover-color;
         }
     }
 }
@@ -124,9 +126,11 @@ nav {
     }
 }
 
-li.active {
+.nav-link.active,
+.active {
     a {
-        color: $action-hover-color
+        color: $navigation-active-link-color;
+        background-color: $navigation-bgcolor-hover;
     }
 }
 
