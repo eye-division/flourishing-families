@@ -4,7 +4,7 @@
     background-color: $footer-background;
     color: $footer-color;
     border-top: 4px solid $darkgreen;
-    //border-bottom: 4px solid $darkgreen;
+    border-bottom: 4px solid $darkgreen;
     text-align: center;
     a {
         color: $footer-color;
@@ -79,7 +79,7 @@
         @include grid-media ($small) {
             display: grid;  // this is the container
             grid-gap: 10px;
-            grid-template-columns: repeat(3, 33% [col-start]);
+            grid-template-columns: repeat(2, 50% [col-start]);
         }
     }
 }

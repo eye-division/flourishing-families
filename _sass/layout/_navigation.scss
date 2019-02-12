@@ -69,7 +69,8 @@ nav {
         flex-wrap: wrap;
         list-style: none;
         justify-content: center; // space-around;
-        border-bottom: 4px solid $darkgreen;
+        border-top: 1px solid $darkgreen;
+        border-bottom: 1px solid $darkgreen;
     }
 
 }

@@ -1,5 +1,5 @@
 // Google Fonts
-@import url(//fonts.googleapis.com/css?family=Libre+Franklin:400,600,900|Lato:300,400);
+@import url(//fonts.googleapis.com/css?family=Libre+Franklin:400,600,700,800,900|Lato:300,400);
 
 // Typography
 // $base-font-family: $font-stack-system;
@@ -130,12 +130,12 @@ $navigation-background: $white;
 $navigation-color: $dark-gray;
 
 $navigation-color-hover: $secondary-color;
-$navigation-active-link-color: $white;
+$navigation-active-link-color: $secondary-color;
 
-$navigation-bgcolor-hover: $secondary-color;
+$navigation-bgcolor-hover: $white;
 
 // footer
-$footer-background: $olivegreen;
+$footer-background: darken($olivegreen,10%);
 $footer-color: $white;
 $footer-color-hover: $white;
 $footer-active-link-color: $black;
