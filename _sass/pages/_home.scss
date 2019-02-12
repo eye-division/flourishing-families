@@ -20,20 +20,18 @@
 
     @include grid-media($large) {
       display: flex;
-      justify-content: space-between;
+      flex-flow: row wrap;
+      justify-content: space-around;
       align-items: stretch;
     }
     section {
+        width: 100%;
+    }
+    section:nth-child(-n+2) {
         @include grid-media($large) {
 
-          flex: 0 1 50%;
-          @supports (display: grid) {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 1rem;
-            width: auto;
-          }
-
+          flex: 0 0 auto;
+          width: 48%;
         }
     }
 }

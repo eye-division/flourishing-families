@@ -80,8 +80,6 @@ _comments:
 
       {% if section.frontpage %}
 
-
-
         {% if section.main_image_path %}
           <section class="gallery--cover has--cover" style="background-image: url({{ section.main_image_path }});">
         {% else %}
@@ -93,7 +91,7 @@ _comments:
           <div class="scrim has--cover">
             <article class="gallery--front">
               <header class="gallery--header">
-                <h2 class="cover--title mb0">{{ section.frontpagetitle }}</h2>
+                <h2 class="cover--title h3 mb0">{{ section.frontpagetitle }}</h2>
               </header>
               {% if section.homepage_description_markdown %}
                 {{ section.homepage_description_markdown | markdownify }}
