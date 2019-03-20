@@ -51,4 +51,17 @@ body {
     //grid-gap: 1rem;
     align-items: start;
   }
+
+
 }
+
+  body.holding {  /* holding page special */
+    display: flex;
+    align-items: center; // centers horizontally
+    justify-content: center;
+    align-content: center;
+
+  }
+
+
+
