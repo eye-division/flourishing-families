@@ -11,14 +11,13 @@
       subhref: "/parents/how-to-parent-well/"
     - subtitle: "Advice for parents"
       subhref: "/parents/advice-for-parents/"
+    - subtitle: "Can you help us"
+      subhref: "/parents/can-you-help-us/"
 - title: "Professionals"
   href: "/professionals/"
   subcategories:
-    - subtitle: "Can you help us"
-      subhref: "/professionals/can-you-help-us/"
     - subtitle: "Further reading"
       subhref: "/professionals/further-reading/"
-
 - title: "Our mission"
   href: "/our-mission/"
 - title: "Who we are"

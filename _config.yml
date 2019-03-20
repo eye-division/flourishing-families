@@ -120,7 +120,7 @@ _options:
 # ga_tracking_id: ""
 
 # Google Recaptcha used for contact form - used by seo-tag
-# recaptcha_site_key: ""
+recaptcha_site_key: "6Lfk05gUAAAAABNUO-z2d1UPn72D2OnG6i0KX3pU"
 
 # Google Site verification if required
 # google_site_verification: ""
