@@ -15,7 +15,7 @@ description: "Flourishing Families Clinic"
 # root of your server.
 baseurl: ""
 # the base hostname & protocol for your site
-url: "https://black-hare.cloudvent.net"
+url: "https://vogue-tree.cloudvent.net"
 
 asset_url: "/assets/"
 
