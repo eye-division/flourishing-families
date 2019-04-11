@@ -5,7 +5,7 @@ $_button-background-color-hover: shade($button-color, 20%);
   background-color: $button-color;
   border: 0;
   border-radius: $base-border-radius;
-  color: contrast-switch($button-color);
+  color: $white;
   cursor: pointer;
   display: inline-block;
   font-family: $base-font-family;
@@ -23,7 +23,7 @@ $_button-background-color-hover: shade($button-color, 20%);
 
   &:hover {
     background-color: $_button-background-color-hover;
-    color: contrast-switch($_button-background-color-hover);
+    color: $white;
   }
 
   &:focus {

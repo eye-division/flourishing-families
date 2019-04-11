@@ -30,7 +30,7 @@ $turquoise: rgb(26, 188, 156);  // Turqoise
 $green: rgb(39, 174, 96);     // Nephritis
 $blue: rgb(41, 128, 185);       // Belize Hole
 $purple: rgb(142, 68, 173);     // Wisteria
-$orange: rgb(211, 84, 0);     // Pumpkin
+$orange: #b14700;     // AA darkened Pumpkin
 $red: rgb(192, 57, 43);       // Pomegranate
 $gray: rgb(127, 140, 141);        // Asbestos
 $dark-gray: rgb(51, 51, 51) !default;
@@ -41,10 +41,11 @@ $light-gray: rgb(237, 237, 237);
 // NHS and FFC colours
 $lightblue: #2697F8;
 $darkbrown: #935422;
-$fawn: #D57A39;
+$fawn: #ab5d24; // AA darkened NHS colour
 $darkgreen: #016B39;
 $midgreen: #6BA114;
-$olivegreen: #ABBE18;
+//$olivegreen: #798711; // this is AA compliant;
+$olivegreen: #ABBE18; // NOT AA contrast compliant;
 $brightgreen: #03A905;
 
 // Social Media Brand Colors */
@@ -135,8 +136,9 @@ $navigation-active-link-color: $secondary-color;
 $navigation-bgcolor-hover: $white;
 
 // footer
-$footer-background: darken($olivegreen,10%);
-$footer-color: $white;
+$footer-background: tint($olivegreen,0.2);
+$footer-color: $black;
+$footer-color-light: $white;
 $footer-color-hover: $white;
 $footer-active-link-color: $black;
 
