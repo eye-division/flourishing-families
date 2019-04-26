@@ -1,62 +1,113 @@
-<!DOCTYPE html>
-<html>
+---
+layout: home
+show_carousel: false
+show_blog: false
+posts_number: 2
+carousel:
+  - image_path:
+    caption:
+    alink:
 
-<head>
+_options:
+  layout:
+    hidden: true
+  show_carousel:
+    hidden: true
+  show_blog:
+    hidden: true
+  posts_number:
+    hidden: true
+  carousel:
+    hidden: true
+  image_path:
+    uploads_dir: "assets/images/:year"
+    width: 1200
+    height: 1200
+    resize_style: contain
+    mime_type: image/jpeg
+  content:
+    uploads_dir: "assets/:year"
+_comments:
+  carousel: Edit the slideshow
+  show_carousel: Show the slideshow
+  show_blog: Show your latest posts on the homepage
+  posts_number: How many posts to show
+  alink: Optional web link from the slide
+  caption: optional caption
+---
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<div class="banner">
 
-  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
-  <link rel="manifest" href="/assets/icons/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
-
-  <link rel="stylesheet" href="/css/main.css">
-
-</head>
-
-<body class="holding">
-
-  <header class="navigation" role="banner">
-
-    <div class="navigation--wrapper">
-
-      <div class="header--wrapper">
-
-       <img src="/assets/logo-s.png?fit=crop&amp;w=150&amp;auto=compress,format" alt="Flourishing Families Clinic" class="header--logo" width="150">
-
-        <div class="title">
-          <h1 class="header--title">Flourishing Families Clinic</h1>
-          <p class="sub--title">Roots to Grow. Wings to Fly</p>
-          <p>Coming soon</p>
-        </div>
-
-        <div class="trust">
-          <a href="https://www.sussexpartnership.nhs.uk/" target="new" title="Sussex Partnership NHS Foundation Trust"><img src="/assets/partnership_logo_2017.png" alt="Sussex Partnership NHS Foundation Trust" class="trustlogo"></a>
-        </div>
-
-      </div><!-- end grid row -->
-
+    <div class="editable">
+      <p class="h3 center-this-text">The Flourishing Families Clinic is a totally new innovation in the NHS, piloted by Sussex Partnership NHS Foundation Trust</p>
+      <p class="center-this-text">We're a specialist clinic, based in adult mental health services, that supports parents seeking treatment for mild to moderate mental health difficulties.</p>
     </div>
 
-  </header>
+  </div><!-- end banner -->
 
-</body>
+    {% if page.show_carousel and page.carousel %}
+      <section class="slideshow">
+        <h2>This is a demo slideshow</h2>
+        <div class="flexslider">
+          <ul class="slides">
+            {% for slides in page.carousel %}
+              <li>
+                {% if slides.alink %}
+                   <a href="{{ site.baseurl }}{{ slides.alink }}" title="View project">
+                {% endif %}
+                {% include img.html src=slides.image width=960 alt=slides.caption %}
+                {% if slides.alink %}
+                  </a>
+                {% endif %}
+                {% if slides.caption %}
+                  <p class="flex-caption">{% if slides.alink %}<a href="{{ site.baseurl }}{{ slides.alink }}" title="View project">{% endif %}{{ slides.caption }}{% if slides.alink %}&nbsp;<svg class="icon icon__white icon--readmore"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="#icon-double_angle_right" /></svg></a>{% endif %}</p>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </section>
+    {% endif %}
 
-</html>
+
+    {% assign sitepages = site.pages | sort: "frontpageorder_number"  %}
+
+    <div class="fifty-fifty">
+
+    {% for section in sitepages %}
+
+      {% if section.frontpage %}
+
+        {% if section.main_image_path %}
+          <section class="gallery--cover has--cover" style="background-image: url({{ section.main_image_path }});">
+        {% else %}
+          <section class="gallery--cover has--cover" style="background-image: url('https://via.placeholder.com/1200x300');">
+        {% endif %}
+
+        <a href="{{ section.url | prepend: site.baseurl }}">
+
+          <div class="scrim has--cover">
+            <article class="gallery--front">
+              <header class="gallery--header">
+                <h2 class="cover--title h3 mb0">{{ section.frontpagetitle }}</h2>
+              </header>
+              {% if section.homepage_description_markdown %}
+                {{ section.homepage_description_markdown | markdownify }}
+                <span class="post--readmore">Read more <span> <svg class="icon icon--post"><use xlink:href="#icon-double_angle_right" /></svg></span></span>
+              {% endif %}
+
+            </article>
+
+          </div>
+
+        </a>
+
+      </section>
+    {% endif %}
+
+  {% endfor %}
+
+
+
+</section>
+</div><!-- end fifty fifty -->

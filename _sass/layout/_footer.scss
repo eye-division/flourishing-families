@@ -23,6 +23,9 @@
     ul {
         @extend %default-ul;
     }
+    strong {
+        color: $black;
+    }
 }
 .footer--wrapper {
     padding: 0 1em;
@@ -55,7 +58,7 @@
 .site--copyright { // bottom of page
     clear: both;
     background-color: $darkgreen;
-    color: $footer-color;
+    color: $footer-color-light;
 
     padding: 1em;
     //margin-top: 1em;
@@ -63,7 +66,7 @@
     font-size: 0.9em;
     a {
         text-decoration: underline;
-        color: $footer-color;
+        color: $footer-color-light;
     }
 }
 

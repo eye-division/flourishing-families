@@ -15,7 +15,7 @@ description: "Flourishing Families Clinic"
 # root of your server.
 baseurl: ""
 # the base hostname & protocol for your site
-url: "https://black-hare.cloudvent.net"
+url: "https://vogue-tree.cloudvent.net"
 
 asset_url: "/assets/"
 
@@ -146,6 +146,7 @@ social:
     username:
     url:
     desc: Like us on Facebook
+    title: Facebook icon
     share: true
 
   - name: Instagram
@@ -153,6 +154,7 @@ social:
     username:
     url:
     desc:
+    title: Instagram icon
     share: false
 
   - name: Twitter
@@ -160,6 +162,7 @@ social:
     username: "ffamilies_SPFT"
     url: "https://twitter.com/FFamilies_SPFT"
     desc: Follow us on Twitter
+    title: Twitter icon
     share: true
 
   - name: Pinterest
@@ -167,6 +170,7 @@ social:
     username:
     url:
     desc: Follow us on Pinterest
+    title: Pinterest icon
     share: true
 
   - name: linkedin
@@ -174,5 +178,6 @@ social:
     username:
     url:
     desc: Connect with us on LinkedIn
+    title: Linkedin icon
     share: true
 

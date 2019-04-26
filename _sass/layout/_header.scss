@@ -75,7 +75,7 @@
 
 
 .sub--title {
-    color: $olivegreen;
+    color: darken($olivegreen,10%);
     font-family: $subheading-font-family;
     font-weight: 400;
     font-style: italic;

@@ -1,33 +1,31 @@
-- title: "Home"
-  href: "/"
-- title: "Parents"
-  href: "/parents/"
+- title: Home
+  href: /
+- title: Parents
+  href: /parents/
   subcategories:
-    - subtitle: "Links"
-      subhref: "/parents/links/"
-    - subtitle: "Further reading"
-      subhref: "/parents/further-reading/"
-    - subtitle: "How to parent well"
-      subhref: "/parents/how-to-parent-well/"
-    - subtitle: "Advice for parents"
-      subhref: "/parents/advice-for-parents/"
-    - subtitle: "Can you help us"
-      subhref: "/parents/can-you-help-us/"
-- title: "Professionals"
-  href: "/professionals/"
+    - subtitle: Links
+      subhref: /parents/links/
+    - subtitle: Further reading
+      subhref: /parents/further-reading/
+    - subtitle: Advice for parents
+      subhref: /parents/advice-for-parents/
+    - subtitle: Can you help us
+      subhref: /parents/can-you-help-us/
+- title: Professionals
+  href: /professionals/
   subcategories:
-    - subtitle: "Further reading"
-      subhref: "/professionals/further-reading/"
-- title: "Our mission"
-  href: "/our-mission/"
-- title: "Who we are"
-  href: "/who-we-are/"
-- title: "What we offer"
-  href: "/what-we-offer/"
+    - subtitle: Further reading
+      subhref: /professionals/further-reading/
+- title: Our mission
+  href: /our-mission/
+- title: Who we are
+  href: /who-we-are/
+- title: What we offer
+  href: /what-we-offer/
   subcategories:
-    - subtitle: "Raising confident kids workshop"
-      subhref: "/what-we-offer/raising-confident-kids-workshop/"
-    - subtitle: "Obsessive compulsive disorder (OCD)"
-      subhref: "/what-we-offer/ocd/"
-- title: "Contact"
-  href: "/contact/"
+    - subtitle: Raising confident kids workshop
+      subhref: /what-we-offer/raising-confident-kids-workshop/
+    - subtitle: Obsessive compulsive disorder (OCD)
+      subhref: /what-we-offer/ocd/
+- title: Contact
+  href: /contact/

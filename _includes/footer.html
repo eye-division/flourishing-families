@@ -22,8 +22,8 @@
 
       <h3>Contact</h3>
       <p>{{ site.name }}</p>
-      <p><strong class="inverse">Tel:</strong> 0300 304 0088<br></p>
-      <p><a href="mailto:{{ site.email }}"><svg class="icon icon--light"><use xlink:href="#icon-envelope_alt" /></svg></a></p>
+      <p><strong>Tel:</strong> 0300 304 0088<br></p>
+      <p><a href="mailto:{{ site.email }}" role="img"><title>Email icon</title><svg class="icon icon--light"><use xlink:href="#icon-envelope_alt" /></svg></a></p>
 
       <ul class="social-media-list list--horizontal">
 
@@ -31,7 +31,7 @@
           {% if social.url != null %}
           <li class="">
             <a href="{{ social.url }}" title="{{ social.desc }}">
-              <svg class="icon {{ social.icon }}"><use xlink:href="#{{ social.icon }}" /></svg>
+              <svg class="icon {{ social.icon }}" role="img"><title>{{ social.title }}</title><use xlink:href="#{{ social.icon }}" /></svg>
              {{ social.username }}</a>
           </li>
           {% endif %}
@@ -48,7 +48,7 @@
 </footer>
 <div class="site--copyright">
   <p class="text">&copy; copyright {{ site.name }} {{ site.time | date: '%Y' }}<br>
-    <a href="/privacy/">Privacy</a><br>
+    <a href="/privacy/">Privacy</a> | <a href="/accessibility/">Accessibility</a><br>
     Site by <a href="https://eyedivision.com">Eye Division</a></p>
 </div>
 
@@ -56,11 +56,7 @@
 {% if site.recaptcha_site_key and jekyll.environment == 'production' %}
 <script src="//www.google.com/recaptcha/api.js" async defer></script>
 {% endif %}
-<script defer src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js"></script>
-<script src="/js/jquery.flexslider-min.js" defer></script>
-<script src="//cdn.jsdelivr.net/npm/lightbox2@2.10.0/dist/js/lightbox.min.js" defer></script>
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 <script src="/js/main.js"></script>
-{% if site.disqus_shortname %}
-<script id="dsq-count-scr" src="//{{ site.disqus_shortname }}.disqus.com/count.js" async></script>
-{% endif %}
+
