@@ -15,7 +15,7 @@ description: "Flourishing Families Clinic"
 # root of your server.
 baseurl: ""
 # the base hostname & protocol for your site
-url: "https://vogue-tree.cloudvent.net"
+url: "https://www.flourishingfamiliesclinic.nhs.uk"
 
 asset_url: "/assets/"
 
