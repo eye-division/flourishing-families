@@ -1,2 +1,2 @@
 /parents/private/*
-/professionals/private/*
+/professionals/training-area/*
