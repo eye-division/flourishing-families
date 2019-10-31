@@ -45,24 +45,44 @@ layout: default
 
   <div class="aside"><!-- start aside -->
 
+    {% if page.private %}
 
-    {% for link in site.data.nav %}
+      {% for link in site.data.private-nav %}
+         {% if link.subcategories != null %}
 
-      {% if link.subcategories != null %}
+          {% if page.url contains link.href %}
 
-
-
-        {% if page.url contains link.href %}
-
-          <ul class="submenu default">
-            <li class="h3"><a class="plain subtitle" href="{{ link.href | prepend: site.baseurl }}">{{ link.title }}</a></li>
-            {% for subcategory in link.subcategories %}
-              <li class="{% unless link.title == "Home" %}{% if page.url contains subcategory.subhref %} active{% endif %}{% endunless %}"><a href="{{ subcategory.subhref | prepend: site.baseurl }}">{{ subcategory.subtitle }}</a></li>
-            {% endfor %}
-          </ul>
+            <ul class="submenu default">
+              <li class="h3"><a class="plain subtitle" href="{{ link.href | prepend: site.baseurl }}">{{ link.title }}</a></li>
+              {% for subcategory in link.subcategories %}
+                <li class="{% unless link.title == "Home" %}{% if page.url contains subcategory.subhref %} active{% endif %}{% endunless %}"><a href="{{ subcategory.subhref | prepend: site.baseurl }}">{{ subcategory.subtitle }}</a></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
         {% endif %}
-      {% endif %}
-    {% endfor %}
+      {% endfor %}
+
+      <p><a href="/logout">Log out</a></p>
+
+    {% else %}
+
+      {% for link in site.data.nav %}
+
+        {% if link.subcategories != null %}
+
+          {% if page.url contains link.href %}
+
+            <ul class="submenu default">
+              <li class="h3"><a class="plain subtitle" href="{{ link.href | prepend: site.baseurl }}">{{ link.title }}</a></li>
+              {% for subcategory in link.subcategories %}
+                <li class="{% unless link.title == "Home" %}{% if page.url contains subcategory.subhref %} active{% endif %}{% endunless %}"><a href="{{ subcategory.subhref | prepend: site.baseurl }}">{{ subcategory.subtitle }}</a></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+    {% endif %}
 
     {% if page.twitterfeed %}
 
