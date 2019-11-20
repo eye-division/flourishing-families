@@ -14,12 +14,26 @@ images:
   - image_path:
     image_title:
     image_description:
-videos1_title: "All videos"
+videos1_title: "Session 1"
 videos1:
   - videoid: hzq8rfhCMvc
     description_markdown: >-
       <strong>Dragon in the mountains</strong><br>
       Why avoidance is so important in anxiety. This little story is a useful reminder of the value of facing our fears.
+  - videoid: lODiQewhF1Y
+    description_markdown: |-
+      <strong>Getting Over a Phobia</strong><br>
+      How you can help parents help their child to overcome their fears, using small, manageable steps.
+  - videoid: hVNPSt4ORgc
+    description_markdown: >-
+      <strong>Compensation</strong><br>
+
+      Latent inhibition: using friends and family to ‘inoculate’ children against their parents fears.
+  - videoid: A-D5Zz4NG8c
+    description_markdown: >-
+      <strong>Fight or Flight</strong><br>
+
+      The evolutionary origins of anxiety. Explaining the fight-flight response.
   - videoid: vrsD35VFB5k
     description_markdown: >-
       <strong>Emotion Coaching 1</strong><br>
@@ -30,40 +44,12 @@ videos1:
       <strong>Anxiety and Coping</strong><br>
 
       These roleplays are a helpful illustration of the things we can accidentally teach our children through our behaviour.
-  - videoid: hVNPSt4ORgc
-    description_markdown: >-
-      <strong>Compensation</strong><br>
-
-      Latent inhibition: using friends and family to ‘inoculate’ children against their parents fears.
-  - videoid: -sT0reZEVFU
-    description_markdown: >-
-      <strong>Hotspots</strong><br>
-      Every parent has parenting hotspots; how can you help parents to rub the corners off theirs?
-  - videoid: KyxT58XGFiM
-    description_markdown: >-
-      <strong>Pros and Cons Analysis</strong><br>
-      When it comes to thinking about overprotection, it’s important to hear parents’ hopes and fears. This exercise allows you to acknowledge parental fears about reducing overprotection, while confronting some of its downsides.
-  - videoid: 3FmuDh1MASg
-    description_markdown: >-
-      <strong>Overprotection</strong><br>
-      Here we discuss how parents can identify when they’re being overprotective and how to rub the corners off of this.
   - videoid: N6PN6C553SM
     description_markdown: |-
       <strong>Key Messages from Session 1</strong><br>
       A quick summary of the key messages from session one.
-  - videoid: sDuSCHrNPP0
-    description_markdown: >-
-      <strong>Key Messages from Session 2</strong><br>
-      A quick summary of the key messages from session two.
-  - videoid: lODiQewhF1Y
-    description_markdown: |-
-      <strong>Getting Over a Phobia</strong><br>
-      How you can help parents help their child to overcome their fears, using small, manageable steps.
-  - videoid: A-D5Zz4NG8c
-    description_markdown: >-
-      <strong>Fight or Flight</strong><br>
-
-      The evolutionary origins of anxiety. Explaining the fight-flight response.
+videos2_title: "Session 2"
+videos2:
   - videoid: XKpJzqG9BIg
     description_markdown: >-
       <strong>Rewards</strong><br>
@@ -72,10 +58,23 @@ videos1:
     description_markdown: >-
       <strong>Star Charts</strong><br>
       Here we discuss our 'Crimes Against Star Charts' and show how you can get more of the behaviour you want in your child.
-  - videoid: bITmb0F8GLw
+  - videoid: -sT0reZEVFU
     description_markdown: >-
-      <strong>Emotion Coaching 2</strong><br>
-      In this second video about emotion coaching, we look at using this technique to tackle challenging behaviour.
+      <strong>Hotspots</strong><br>
+      Every parent has parenting hotspots; how can you help parents to rub the corners off theirs?
+  - videoid: 3FmuDh1MASg
+    description_markdown: >-
+      <strong>Overprotection</strong><br>
+      Here we discuss how parents can identify when they’re being overprotective and how to rub the corners off of this.
+  - videoid: KyxT58XGFiM
+    description_markdown: >-
+      <strong>Pros and Cons Analysis</strong><br>
+      When it comes to thinking about overprotection, it’s important to hear parents’ hopes and fears. This exercise allows you to acknowledge parental fears about reducing overprotection, while confronting some of its downsides.
+  - videoid: sDuSCHrNPP0
+    description_markdown: >-
+      <strong>Key Messages from Session 2</strong><br>
+      A quick summary of the key messages from session two.
+
 _options:
   layout:
     hidden: true
@@ -132,4 +131,26 @@ _comments:
 
 {% endif %}
 
-  <p><a href="/professionals/training-area/">Professionals training area</a> | <a href="/logout">Log out</a></p>
+{% if page.videos2 %}
+  <hr>
+  <div class="expander">
+    <a href="javascript:void(0)" class="expander-trigger expander-hidden">{{ page.videos2_title }}</a>
+
+    <div class="expander-content">
+      {% for video in page.videos2 %}
+        {% if video.videoid %}
+          {% if video.description_markdown %}
+            <p class="description">{{ video.description_markdown | markdownify }}</p>
+          {% endif %}
+          {% include youtubeplayer.html id=video.videoid %}
+        {% endif %}
+      {% endfor %}
+    </div>
+
+  </div>
+
+{% endif %}
+
+<hr>
+
+<p><a href="/professionals/training-area/">Professionals training area</a> | <a href="/logout">Log out</a></p>
