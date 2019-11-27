@@ -1,8 +1,10 @@
 - title: Parents
   href: /parents/
   subcategories:
-    - subtitle: Links
-      subhref: /parents/links/
+    - subtitle: Learning area
+      subhref: /parents/learning-area/
+    - subtitle: Videos
+      subhref: /parents/learning-area/video/
 - title: Professionals
   href: /professionals/
   subcategories:

@@ -1,0 +1,151 @@
+---
+layout: page
+title: "Learning area"
+permalink: /parents/learning-area/video/
+main_image_path:
+main_image_caption:
+frontpage: false
+homepage_description_markdown:
+frontpagetitle:
+archive: false
+aside: true
+private: true
+images:
+  - image_path:
+    image_title:
+    image_description:
+videos1_title: "Session 1"
+videos1:
+  - videoid: hzq8rfhCMvc
+    description_markdown: >-
+      <strong>Dragon in the mountains</strong><br>
+      This little story is a useful reminder of the value of facing our fears.
+  - videoid: lODiQewhF1Y
+    description_markdown: |-
+      <strong>Getting Over a Phobia</strong><br>
+      How you can help your child to overcome their fears using baby steps
+  - videoid: hVNPSt4ORgc
+    description_markdown: >-
+      <strong>Compensation</strong><br>
+
+      Good news, you don’t have to do it all yourself! How friends and family can help protect your children from fears.
+  - videoid: A-D5Zz4NG8c
+    description_markdown: >-
+      <strong>Fight or Flight</strong><br>
+
+      Anxiety can feel really scary at times, here we discuss the evolutionary origins of anxiety.
+  - videoid: vrsD35VFB5k
+    description_markdown: >-
+      <strong>Emotion Coaching 1</strong><br>
+
+      Emotion coaching is a useful technique to help children manage and make sense of their emotions.
+  - videoid: a-6X8gub1zg
+    description_markdown:  >-
+      <strong>Anxiety and Coping</strong><br>
+
+      These videos are a helpful illustration of the things we can accidentally teach our children through our behaviour.
+  - videoid: N6PN6C553SM
+    description_markdown: |-
+      <strong>Key Messages from Session 1</strong><br>
+      Quick take home messages from session one.
+videos2_title: "Session 2"
+videos2:
+  - videoid: XKpJzqG9BIg
+    description_markdown: >-
+      <strong>Rewards</strong><br>
+      How should I use rewards with my child? What are the best rewards to give? Should I ever take away a reward? This video answers all these questions and more.
+  - videoid: DBkDLRS0nz8
+    description_markdown: >-
+      <strong>Star Charts</strong><br>
+      Here we discuss our ‘Crimes Against Star Charts’ and show how you can get more of the behaviour you want in your child.
+  - videoid: -sT0reZEVFU
+    description_markdown: >-
+      <strong>Hotspots</strong><br>
+      Every parent has parenting hotspots; how can you rub the corners off yours?
+  - videoid: 3FmuDh1MASg
+    description_markdown: >-
+      <strong>Overprotection</strong><br>
+      How to tell if you’re being overprotective and how to rub the corners off of your overprotection.
+
+  - videoid: sDuSCHrNPP0
+    description_markdown: >-
+      <strong>Key Messages from Session 2</strong><br>
+      Quick take home messages from session two.
+
+_options:
+  layout:
+    hidden: true
+  aside:
+    hidden: true
+  private:
+    hidden: true
+  permalink:
+    hidden: true
+  main_image_path:
+    width: 1200
+    height: 1200
+    resize_style: contain
+    mime_type: image/jpeg
+_comments:
+  title: Page title
+  permalink: Be careful editing this
+  main_image_path: Image used to represent your page
+  archive: Not used yet!
+  frontpage: Show this page on the homepage
+  homepage_description_markdown: Text used on homepage if shown
+  frontpagetitle: Alternative title for home page use
+  images: Add and edit images here
+---
+
+<div class="editable">
+  <h2>Videos</h2>
+
+  </div>
+
+{% if page.videos1 %}
+
+  <hr>
+
+  <div class="expander">
+    <a href="javascript:void(0)" class="expander-trigger expander-hidden">{{ page.videos1_title }}</a>
+
+    <div class="expander-content">
+      {% for video in page.videos1 %}
+        {% if video.videoid %}
+          {% if video.description_markdown %}
+            <p class="description">{{ video.description_markdown | markdownify }}</p>
+          {% endif %}
+          {% include youtubeplayer.html id=video.videoid %}
+
+        {% endif %}
+
+      {% endfor %}
+    </div>
+
+  </div>
+
+{% endif %}
+
+{% if page.videos2 %}
+  <hr>
+  <div class="expander">
+    <a href="javascript:void(0)" class="expander-trigger expander-hidden">{{ page.videos2_title }}</a>
+
+    <div class="expander-content">
+      {% for video in page.videos2 %}
+        {% if video.videoid %}
+          {% if video.description_markdown %}
+            <p class="description">{{ video.description_markdown | markdownify }}</p>
+          {% endif %}
+          {% include youtubeplayer.html id=video.videoid %}
+        {% endif %}
+      {% endfor %}
+    </div>
+
+  </div>
+
+{% endif %}
+
+<hr>
+
+<p><a href="/parents/learning-area/">Learning area</a> | <a href="/logout">Log out</a></p>
