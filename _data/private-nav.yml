@@ -5,6 +5,8 @@
       subhref: /parents/learning-area/
     - subtitle: Videos
       subhref: /parents/learning-area/video/
+    - subtitle: Resources
+      subhref: /parents/learning-area/resources/
 - title: Professionals
   href: /professionals/
   subcategories:
