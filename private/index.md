@@ -1,0 +1,42 @@
+---
+layout: page
+title: Private
+permalink: /private/
+main_image_path:
+main_image_caption:
+frontpage: false
+homepage_description_markdown:
+frontpagetitle:
+frontpageorder_number:
+images:
+  - image_path:
+    image_title:
+    image_description:
+_options:
+  layout:
+    hidden: true
+  permalink:
+    hidden: true
+  image_path:
+    uploads_dir: 'assets/images/:year'
+    width: 1200
+    height: 1200
+    resize_style: contain
+    mime_type: image/jpeg
+  main_image_path:
+    uploads_dir: 'assets/images/:year'
+    width: 1200
+    height: 1200
+    resize_style: contain
+    mime_type: image/jpeg
+  content:
+    uploads_dir: 'assets/:year'
+_comments:
+  title: Page title
+  main_image_path: Image used to represent your page
+  frontpage: Show this page on the homepage
+  homepage_description_markdown: Text used on homepage if shown
+  frontpagetitle: Alternative title for home page use
+  images: Add and edit images here
+---
+Test private page

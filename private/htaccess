@@ -1,0 +1,8 @@
+---
+layout: null
+permalink: /private/.htacess
+---
+AuthType Basic
+AuthName "Protected Area"
+AuthUserFile /private/.htpasswd
+Require valid-user
