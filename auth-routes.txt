@@ -1,2 +1,1 @@
 /parents/learning-area/*
-/professionals/training-area/*
