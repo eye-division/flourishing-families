@@ -1,3 +1,4 @@
+---
 - title: Home
   href: /
 - title: Parents
@@ -27,7 +28,6 @@
   subcategories:
     - subtitle: Raising confident kids workshop
       subhref: /what-we-offer/raising-confident-kids-workshop/
-    - subtitle: Obsessive compulsive disorder (OCD)
-      subhref: /what-we-offer/ocd/
 - title: Contact
   href: /contact/
+---
